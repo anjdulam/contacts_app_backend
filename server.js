@@ -2,8 +2,9 @@ const express = require('express');
 const app= express();
 const dotenv = require('dotenv').config();
 const port=process.env.PORT || 5000;   //static port that we rae ging 
-const errorHandler=require('./middleware/errorHandler');
 const connectDb = require('./dbconnection/dbConnection');
+const errorHandler=require('./middleware/errorHandler');
+
 
 connectDb();
 //wrong coding practice cuz u shouldnt define routes in server.js
