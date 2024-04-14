@@ -15,8 +15,16 @@ connectDb();
 
 //middleware to parses the express data as json 
 app.use(express.json());   
+
+//routes: 
 //uisng app.use() middleware 
 app.use('/api/contacts',require('./routes/contactRoutes'));
+app.use("/api/users", require("./routes/userRoutes"));
+
+
+
+
+
 //error handler middleware 
 app.use(errorHandler);
 
